@@ -6,46 +6,10 @@
   margin: 0 auto;
 }
 .search-form {
-  margin-top: 33px;
+  margin-top: 30px;
 }
 @media only screen and (max-width: 650px) {
   .search-form {
     display: none;
   }
-}
-.logo{
-	font-size: 2.3em;
-}
-.header-link{
-	margin-top: 35px;
-}
-.save-search{
-	background: none;
-  border: none;
-  text-decoration: underline;
-  color: blue;
-}
-.saved-searches{
-	list-style: none;
-}
-/*.saved-searches li{
-	background: none;
-  border: none;
-  text-decoration: underline;
-  color: blue;
-}*/
-.categorys{
-	text-transform: capitalize;
-}
-.add-options{
-	height: 50px;
-}
-.add-options:hover{
-	background-color: lightblue;
-}
-.add-options div{
-	display: none;
-}
-.add-options:hover div{
-	display: block;
 }
