@@ -25,13 +25,13 @@ function printData(data){
     }
 }
 
-// Ajax de Jquery para recuperar la data de books-schema.json
-$.ajax({
-    url: "books-schema.json",
-    success: function (data) {
-    	printData(data);
-    }
-});
+fetch('books-schema.json')
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+		printData(data);
+	})
 
 // La instrucción dice eliminar de la vista, se puede esconder o elimitar el elimento html, en este caso obtaré por eliminar el elemento
 $('.delete-button').click(function(e) {

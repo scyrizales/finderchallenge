@@ -13,13 +13,14 @@ new Awesomplete(input, {
 });
 
 
-
-$(document).ready(function(){
-    $('#search-button').attr('disabled',true);
-    $('#search-input').keyup(function(){
-        if($(this).val().length > 1)
-            $('#search-button').attr('disabled', false);            
+document.addEventListener('DOMContentLoaded', function(){
+    var searchInput = document.getElementById('search-input');
+    var searchButton = document.getElementById('search-button');
+    searchButton.disabled = true;
+    searchInput.addEventListener('keyup', function(e) {
+        if(e.target.value.length > 1)
+            searchButton.disabled = false;
         else
-            $('#search-button').attr('disabled',true);
-    })
-});
+            searchButton.disabled = true;
+    });
+}, false);
